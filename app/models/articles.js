@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const md5 = require("md5")
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/news')
 
 const Schema = mongoose.Schema,
 ObjectId = Schema.ObjectId;
