@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8">
+        <title>Mongo Scraper</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css" />
+    </header>
+    <body>
+        <head>
+            <nav class="main-nav">
+                <ul>
+                    <li><span class="logo">Mongo Scraper</span></li>
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/articles">Saved Articles</a></li>
+                    <li><button class="btn btn-danger scrape">SCRAPE NEW ARTICLES</button></li>
+                </ul>
+            </nav>
+        </head>
+        <div class="main-slider">
+            <h1>Mongo Scraper</h1>
+            <br>
+            <h3>New York Times Edition</h3>
+            <div class="black-layout"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="articles">
+                        <div class="alert alert-danger" role="alert">
+                            Uh oh. Looks like we don't have any new articles
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="/js/script.js"></script>
+        <script>
+            $(document).ready(displayNewArticles);
+        </script>
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Scraping Done</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
