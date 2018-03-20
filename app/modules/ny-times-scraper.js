@@ -7,7 +7,7 @@ const { ArticleModel, NoteModel } = require("../models/articles")
 class NYTimesScraper extends JSONResp {
     constructor () {
         super()
-        this.url = "https://www.nytimes.com/section/world"
+        this.url = process.env.NY_TIMES_URL
     }
 
     scrape (callback) {
